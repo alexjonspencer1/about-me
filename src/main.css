@@ -52,6 +52,16 @@
     font-family: 'Raleway', sans-serif;
 }
 
+.button-2 {
+    background-color: #CFF09E;
+    border: none;
+    color: #0B486B;
+    padding: 15px 15px;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Raleway', sans-serif;
+}
+
 .result {
     color: #0B486B;
     font-family: 'Raleway', sans-serif;
