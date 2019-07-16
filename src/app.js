@@ -54,7 +54,7 @@ clickButton.onclick = function() {
         numberCorrect += 1; 
     }
     
-    if(responseTwo === false) {
+    if(!responseTwo) {
         numberCorrect += 1;
     }
 
