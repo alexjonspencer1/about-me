@@ -7,13 +7,14 @@ test('if they guess the right number', (assert) => {
     //Arrange
     // Set up your parameters and expectations
 
-    const response = 10;
+    const response = 15;
+    const correctNumber = 15;
     const expected = true; 
 
     //Act 
     // Call the function you're testing and set the result to a const
 
-    const result = comparedNumbers(response);
+    const result = comparedNumbers(response, correctNumber);
 
     //Assert
 
@@ -27,12 +28,13 @@ test('if they guess lower than right number', (assert) => {
     // Set up your parameters and expectations
 
     const response = 8;
+    const correctNumber = 10;
     const expected = false; 
 
     //Act 
     // Call the function you're testing and set the result to a const
 
-    const result = comparedNumbers(response);
+    const result = comparedNumbers(response, correctNumber);
 
     //Assert
 
@@ -45,13 +47,14 @@ test('if they guess higher than right number', (assert) => {
     //Arrange
     // Set up your parameters and expectations
 
-    const response = 13;
+    const response = 18;
+    const correctNumber = 15;
     const expected = false; 
 
     //Act 
     // Call the function you're testing and set the result to a const
 
-    const result = comparedNumbers(response);
+    const result = comparedNumbers(response, correctNumber);
 
     //Assert
 

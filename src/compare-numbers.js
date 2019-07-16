@@ -1,7 +1,9 @@
-function comparedNumbers(response) {
-    if(response === 10) {
+function comparedNumbers(guess, correctNumber) {
+    if(guess === correctNumber) {
         return true;
-    } else {
+    } else if(guess < correctNumber) {
+        return false;
+    } else if(guess > correctNumber) {
         return false;
     }
 }
