@@ -23,9 +23,16 @@
     height: 30%;
     float: left;
     padding-right: 30px;
+    padding-left: 10px;
 }
 
-.list {
+.list-ordered {
+    color: #79BD9A;
+    font-family: 'Raleway', sans-serif;
+    list-style-type: square;
+}
+
+.list-unordered {
     color: #79BD9A;
     font-family: 'Raleway', sans-serif;
 }
