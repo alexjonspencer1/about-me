@@ -61,7 +61,7 @@ clickButton.onclick = function execute() {
         numberCorrect += 1;
     }
 
-    const numberPercent = Math.floor(numberCorrect / 3) * 100;
+    const numberPercent = Math.floor(numberCorrect / 3 * 100);
 
     //Result text to user
     let userResponse = ('Hey' + ' ' + firstNameParticipant + ' ' + lastNameParticipant + '. Thanks for taking my quiz, let\'s see how you did! It looks like you got ' + numberCorrect + '/3, or ' + numberPercent + '% correct.');
