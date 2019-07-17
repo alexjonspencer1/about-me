@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
 </head>
 <body>
+
     <header>
         <nav>
             <a class="nav" href="./">Home</a>
@@ -18,15 +19,20 @@
         </nav>
         <h1 class="page-title">Welcome To The Number Guessing Game!</h1>
     </header>
+    
     <main>
+
         <section>
             <h2 class = "header">
-                Rules:
+                The Rules:
             </h2>
             <p class="paragraph">
-                Ok, so here are the rules. You'll get four (I said 4 only!) guesses to identify the correct number. There will be a counter below, keeping track of your turns as you enter text into the below text box. Upon each button click, you'll see if you've been successful or if you need to try again. As soon as you've reached your four tries, the game will be over (unless you've won!). 
+                Ok, so here are the rules. You'll get four (I said 4 only!) guesses to identify the correct number. 
+                After each guess, a message will appear below telling you if it is too high, too low, or correct! 
+                It will also display how many tries you have left. Once you have zero (0) tries left, you've lost the game! 
+                But feel free to try again!! 
             </p>
-            <input class="number-guess-input" id="number-guess-input" type="number" min="0" max="20">
+                <input class="number-guess-input" id="number-guess-input" type="number" min="0" max="20">
             <p>
                 <button class="button" id="button">Guess Number!</button>
             </p>
@@ -35,6 +41,7 @@
             </p>
             <button class="button-2" id="on-click-2" onClick="window.location.reload()">Click to Reset Quiz!</button>
         </section>
+
     </main>
 
     <script type="module" src="src/number-guess.js"></script>

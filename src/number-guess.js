@@ -1,21 +1,19 @@
-//What am I importing from other js files?
+// Import My JS Files
 
 import comparedNumbers from './compare-numbers.js';
 
-// What do I need from the DOM (elements)
+// Defining DOM Elements
 
 const button = document.getElementById('button');
 const userGuess = document.getElementById('number-guess-input');
 const quizResult = document.getElementById('quiz-result');
 
-// What state do I need to track? 
+// Tracking States
 
-// Function correct number
-
-let correctNumber = 15;
+const correctNumber = Math.floor(Math.random() * 20); //Attribute MDN web docs
 let numberRemaining = 4;
 
-// What events do I need to listen to? 
+// Event Handler
 
 button.addEventListener('click', () => {
     
@@ -23,31 +21,27 @@ button.addEventListener('click', () => {
     
     const userGuessValue = userGuess.value;
     
-    let userResponseCorrect = ('You have guessed the correct number!!');
-    let userResponseLow = ('Your guess was too low! You have ' + numberRemaining + ' guesses remaining!');
-    let userResponseHigh = ('Your guess was too high! You have ' + numberRemaining + ' guesses remaining!');
-    let userResponseLose = ('Woops, you have run out of guesses!! Thanks for playing and feel free to try again!');
+    const userResponseCorrect = ('You have guessed the correct number!!');
+    const userResponseLow = ('Your guess was too low! Number of tries remaining: ' + numberRemaining);
+    const userResponseHigh = ('Your guess was too high! Number of tries remaining: ' + numberRemaining);
+    const userResponseLose = ('Woops, you have run out of guesses!! Thanks for playing and feel free to try again using the "Click To Reset Quiz" button below!');
+    
+    if(comparedNumbers(userGuessValue, correctNumber) === undefined) {
+        button.disabled = true;
+        return quizResult.textContent = userResponseCorrect;
+    }
    
     if(numberRemaining === 0) {
         button.disabled = true;
         return quizResult.textContent = userResponseLose;
     }
-    
-    // User guess is correct
-    if(comparedNumbers(userGuessValue, correctNumber) === undefined) {
-        button.disabled = true;
-        return quizResult.textContent = userResponseCorrect;
-    }
-    
-    // User guess is too low
 
     if(comparedNumbers(userGuessValue, correctNumber) === -1) {
         return quizResult.textContent = userResponseLow;
+
     }
-    
-    // User guess is too high
     if(comparedNumbers(userGuessValue, correctNumber) === 1) {
         return quizResult.textContent = userResponseHigh;
+
     }
-    
 });
