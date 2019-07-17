@@ -9,7 +9,7 @@ test('if they guess the right number', (assert) => {
 
     const response = 15;
     const correctNumber = 15;
-    const expected = true; 
+    const expected = 0; 
 
     //Act 
     // Call the function you're testing and set the result to a const
@@ -29,7 +29,7 @@ test('if they guess lower than right number', (assert) => {
 
     const response = 8;
     const correctNumber = 10;
-    const expected = false; 
+    const expected = -1; 
 
     //Act 
     // Call the function you're testing and set the result to a const
@@ -49,7 +49,7 @@ test('if they guess higher than right number', (assert) => {
 
     const response = 18;
     const correctNumber = 15;
-    const expected = false; 
+    const expected = 1; 
 
     //Act 
     // Call the function you're testing and set the result to a const
