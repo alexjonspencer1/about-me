@@ -66,7 +66,7 @@
 .result {
     color: #0B486B;
     font-family: 'Raleway', sans-serif;
-    font-size: 50px;
+    font-size: 20px;
 }
 
 nav {
@@ -82,7 +82,7 @@ nav a {
 
 .bottom-section {
     text-align: center;
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
 main {
