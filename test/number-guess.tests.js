@@ -42,7 +42,7 @@ test('if they guess lower than right number', (assert) => {
 
 });
 
-//Test 2
+//Test 3
 test('if they guess higher than right number', (assert) => {
     //Arrange
     // Set up your parameters and expectations
@@ -61,4 +61,3 @@ test('if they guess higher than right number', (assert) => {
     assert.equal(result, expected);
 
 });
-
