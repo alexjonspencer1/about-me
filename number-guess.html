@@ -13,11 +13,11 @@
 <body>
 
     <header>
-        <nav>
-            <a class="nav" href="./">Home</a>
-            <a class="nav" href="number-guess.html">Number Guessing Game</a>
-        </nav>
         <h1 class="page-title">Welcome To The Number Guessing Game!</h1>
+        <nav>
+            <a href="./">Home</a>
+            <a href="number-guess.html">Number Guessing Game</a>
+        </nav>
     </header>
     
     <main>
@@ -32,12 +32,14 @@
                 It will also display how many tries you have left. Once you have zero (0) tries left, you've lost the game! 
                 But feel free to try again!! 
             </p>
+        </section>
+        <section class="main-section">
                 <input class="number-guess-input" id="number-guess-input" type="number" min="0" max="20">
             <p>
                 <button class="button" id="button">Guess Number!</button>
             </p>
             <p 
-                class="result" id = "quiz-result">
+                class="result-button-game" id = "quiz-result">
             </p>
             <button class="button-2" id="on-click-2" onClick="window.location.reload()">Click to Reset Quiz!</button>
         </section>

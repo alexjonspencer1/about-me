@@ -68,7 +68,13 @@
     font-size: 50px;
 }
 
-.nav {
+nav {
     font-family: 'Raleway', sans-serif;
-    color: #0B486B;
+    text-align: center;
+    background: #3B8686;
+    padding: 15px;
+}
+
+nav a {
+    color: white;
 }

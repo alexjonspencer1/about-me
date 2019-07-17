@@ -6,6 +6,7 @@
     text-transform: uppercase;
     font-weight: bold;
     font-size: 50px;
+    text-align: center;
 }
 
 .header {
@@ -68,6 +69,23 @@
     font-size: 50px;
 }
 
-.nav {
+nav {
     font-family: 'Raleway', sans-serif;
+    text-align: center;
+    background: #3B8686;
+    padding: 15px;
+}
+
+nav a {
+    color: white;
+}
+
+.bottom-section {
+    text-align: center;
+    margin-top: 50px;
+}
+
+main {
+    width: 85%;
+    margin: 0 auto;
 }
