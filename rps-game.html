@@ -35,15 +35,15 @@
         <section class="selector-section">
             <label>
                 <input id="rock" type="radio" name="side" value="rock">
-                <img class="rock-image radio-image" src="assets/rock.png">
+                <img class="rock-image radio-image" src="assets/Screen Shot 2019-07-18 at 7.47.11 AM.png">
             </label>
             <label>
                 <input id="paper" type="radio" name="side" value="paper">
-                <img class="paper-image radio-image" src="assets/paper.jpg">
+                <img class="paper-image radio-image" src="assets/Screen Shot 2019-07-18 at 7.47.19 AM.png">
             </label>
             <label>
                 <input id="scissors" type="radio" name="side" value="scissors">
-                <img class="scissors-image radio-image" src="assets/scissors.jpg">
+                <img class="scissors-image radio-image" src="assets/Screen Shot 2019-07-18 at 7.47.26 AM.png">
             </label>
             <p>
                 <button class="button" id="button">Play!</button>
@@ -51,10 +51,11 @@
         </section>
         <section class="record-section">
             <p id="record">
-                <span>You've won: <span class="count" id="win-count">0</span></span>
-                <span>You've lost: <span class="count" id="loss-count">0</span></span>
+                <span class="count-format">You've won: <span class="count" id="win-count"></span></span>
+                <span class="count-format">You've lost: <span class="count" id="loss-count"></span></span>
+                <span class="count-format">You've tied: <span class="count" id="tie-count"></span></span>
             </p>
-            <p></p>
+            <p class="result-section">
                 You chose <span id="user-choice"></span> and the computer chose <span id="computer-choice"></span>. Therefore, you <span class="result-rps-game" id = "rps-result"></span>
             </p>
         </section>

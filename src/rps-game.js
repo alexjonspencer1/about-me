@@ -1,10 +1,11 @@
-import { getThrowFromNumber, getThrow } from './get-play.js';
+import { getThrow } from './get-play.js';
 
 // Define referenced DOMs 
 
 const button = document.getElementById('button');
 const winCount = document.getElementById('win-count');
 const lossCount = document.getElementById('loss-count');
+const tieCount = document.getElementById('tie-count');
 const message = document.getElementById('rps-result');
 const messageUserChoice = document.getElementById('user-choice');
 const messageCompChoice = document.getElementById('computer-choice');
@@ -13,9 +14,9 @@ const messageCompChoice = document.getElementById('computer-choice');
 
 let wins = 0;
 let losses = 0;
+let ties = 0;
 
 button.addEventListener('click', () => {
-    // console.log('working');
 
     // // determine which item the user picked
 
@@ -23,14 +24,10 @@ button.addEventListener('click', () => {
     let userThrow = userChoice.value;
     messageUserChoice.textContent = userThrow;
 
-    // console.log(userChoice.value);
-
     // // determine which number generated which item
 
     const computerChoice = getThrow();
     messageCompChoice.textContent = computerChoice;
-
-    // console.log(computerChoice);
 
     // compare the item the user picked with the item generated
     
@@ -52,4 +49,17 @@ button.addEventListener('click', () => {
         } else {
             message.textContent = 'win'; }
     }
+
+    // tally the wins and losses
+
+    if(message.textContent === 'tie') { 
+        tieCount.textContent = ties += 1;
+    }
+    if(message.textContent === 'win') {
+        winCount.textContent = wins += 1; 
+    }
+    if(message.textContent === 'lose') {
+        lossCount.textContent = losses += 1;
+    }
+
 });
