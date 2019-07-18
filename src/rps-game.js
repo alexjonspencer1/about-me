@@ -11,6 +11,8 @@ const messageUserChoice = document.getElementById('user-choice');
 const messageCompChoice = document.getElementById('computer-choice');
 const userBetMessage = document.getElementById('money-bet');
 const userMoneyLeft = document.getElementById('money-left');
+const computerImage = document.getElementById('computer-result-image');
+const userImage = document.getElementById('user-result-image')
 
 // Tracking states
 
@@ -33,10 +35,22 @@ button.addEventListener('click', () => {
     let userThrow = userChoice.value;
     messageUserChoice.textContent = userThrow;
 
-    // Determine Computer RPS Choice from RNG getThrow
+    // Show User Result
 
+    userImage.classList.remove('invisible');
+    const srcUser = 'assets/' + userThrow + '.png';
+    userImage.src = srcUser;
+    
+    // Determine Computer RPS Choice from RNG getThrow
+    
     const computerChoice = getThrow();
     messageCompChoice.textContent = computerChoice;
+
+    // Show Computer Result
+
+    computerImage.classList.remove('invisible');
+    const srcComputer = 'assets/' + computerChoice + '.png';
+    computerImage.src = srcComputer;
 
     // Generate Results
     

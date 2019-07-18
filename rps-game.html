@@ -27,7 +27,15 @@
                 The Rules:
             </h1>
             <p 
-                class="paragraph">So here are the rules, they're pretty simple. You'll select from rock paper, or scissors below. You'll play against the computer. Paper beats rock, rock beats scissors, scissors beats paper. We'll keep a tally showing how well you're doing, and let you know the results after each game. 
+                class="paragraph">So here are the rules, they're pretty simple. You'll select from rock paper, or scissors below. 
+                You'll play against the computer. We'll keep a tally showing how well you're doing, and let you know the results after each game. 
+            <p>
+                <ul class="paragraph">
+                    <li>Paper beats rock</li>
+                    <li>Rock beats scissors</li>
+                    <li>Scissors beats paper</li>
+                </ul>
+            </p>
             </p>
         </section>
 
@@ -43,15 +51,15 @@
         <section class="selector-section">
             <label>
                 <input class="picture-input" id="rock" type="radio" name="side" value="rock">
-                <img class="rock-image radio-image" src="assets/Screen Shot 2019-07-18 at 7.47.11 AM.png">
+                <img class="rock-image radio-image" src="assets/rock.png">
             </label>
             <label>
                 <input class="picture-input" id="paper" type="radio" name="side" value="paper">
-                <img class="paper-image radio-image" src="assets/Screen Shot 2019-07-18 at 7.47.19 AM.png">
+                <img class="paper-image radio-image" src="assets/paper.png">
             </label>
             <label>
                 <input class="picture-input" id="scissors" type="radio" name="side" value="scissors">
-                <img class="scissors-image radio-image" src="assets/Screen Shot 2019-07-18 at 7.47.26 AM.png">
+                <img class="scissors-image radio-image" src="assets/scissors.png">
             </label>
             <p>
                 <button class="button" id="button">Play!</button>
@@ -59,6 +67,10 @@
         </section>
 
         <section class="record-section">
+            <p>
+                <img id="user-result-image" class="invisible" src="assets/scissors.png">
+                <img id="computer-result-image" class="invisible" src="assets/scissors.png">
+            </p>
             <p id="record">
                 <span class="count-format">You've won: <span class="count" id="win-count"></span></span>
                 <span class="count-format">You've lost: <span class="count" id="loss-count"></span></span>
