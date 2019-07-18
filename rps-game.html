@@ -34,15 +34,15 @@
         
         <section class="selector-section">
             <label>
-                <input type="radio" name="side">
+                <input id="rock" type="radio" name="side" value="rock">
                 <img class="rock-image radio-image" src="assets/rock.png">
             </label>
             <label>
-                <input type="radio" name="side">
+                <input id="paper" type="radio" name="side" value="paper">
                 <img class="paper-image radio-image" src="assets/paper.jpg">
             </label>
             <label>
-                <input type="radio" name="side">
+                <input id="scissors" type="radio" name="side" value="scissors">
                 <img class="scissors-image radio-image" src="assets/scissors.jpg">
             </label>
             <p>
@@ -54,12 +54,14 @@
                 <span>You've won: <span class="count" id="win-count">0</span></span>
                 <span>You've lost: <span class="count" id="loss-count">0</span></span>
             </p>
-            <p 
-                class="result-rps-game" id = "rps-result">
+            <p></p>
+                You chose <span id="user-choice"></span> and the computer chose <span id="computer-choice"></span>. Therefore, you <span class="result-rps-game" id = "rps-result"></span>
             </p>
         </section>
 
     </main>
 
+    <script type="module" src="src/rps-game.js"></script>
+    
 </body>
 </html>

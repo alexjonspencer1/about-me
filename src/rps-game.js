@@ -1,1 +1,55 @@
-import getPlayNumber from './get-play.js';
+import { getThrowFromNumber, getThrow } from './get-play.js';
+
+// Define referenced DOMs 
+
+const button = document.getElementById('button');
+const winCount = document.getElementById('win-count');
+const lossCount = document.getElementById('loss-count');
+const message = document.getElementById('rps-result');
+const messageUserChoice = document.getElementById('user-choice');
+const messageCompChoice = document.getElementById('computer-choice');
+
+// Event handlers
+
+let wins = 0;
+let losses = 0;
+
+button.addEventListener('click', () => {
+    // console.log('working');
+
+    // // determine which item the user picked
+
+    const userChoice = document.querySelector('input:checked');
+    let userThrow = userChoice.value;
+    messageUserChoice.textContent = userThrow;
+
+    // console.log(userChoice.value);
+
+    // // determine which number generated which item
+
+    const computerChoice = getThrow();
+    messageCompChoice.textContent = computerChoice;
+
+    // console.log(computerChoice);
+
+    // compare the item the user picked with the item generated
+    
+    if(userThrow === computerChoice) {
+        message.textContent = 'tie';
+    } else if(userThrow === 'rock') {
+        if(computerChoice === 'paper') {
+            message.textContent = 'lose';
+        } else {
+            message.textContent = 'win'; }
+    } else if(userThrow === 'paper') {
+        if(computerChoice === 'rock') {
+            message.textContent = 'win';
+        } else {
+            message.textContent = 'lose'; }
+    } else if(userThrow === 'scissors') {
+        if(computerChoice === 'rock') {
+            message.textContent = 'lose';
+        } else {
+            message.textContent = 'win'; }
+    }
+});
