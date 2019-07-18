@@ -14,6 +14,7 @@ const userMoneyLeft = document.getElementById('money-left');
 const computerImage = document.getElementById('computer-result-image');
 const userImage = document.getElementById('user-result-image');
 const recordSection = document.getElementById('record-section');
+const gameOverMessage = document.getElementById('game-over');
 
 // Tracking states
 
@@ -93,5 +94,10 @@ button.addEventListener('click', () => {
         tieCount.textContent = ties += 1;
         userMoneyLeft.textContent = moneyLeft;
     }
+
+    if(moneyLeft <= 0) {
+        button.disabled = true;
+        gameOverMessage.textContent = ('You have lost, please refresh to play again!');
+    }    
 
 });
