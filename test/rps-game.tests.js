@@ -1,7 +1,5 @@
 import { getThrowFromNumber } from '../src/get-play.js';
 
-//WOULD YOU INPUT TWO HERE OR WHAT?!
-
 const test = QUnit.test;
 
 //Test 1

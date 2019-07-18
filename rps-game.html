@@ -26,22 +26,21 @@
             <h1 class="header">
                 The Rules:
             </h1>
-            <p 
-                class="paragraph">So here are the rules, they're pretty simple. You'll select from rock paper, or scissors below. 
+            <p class="paragraph">
+                So here are the rules, they're pretty simple. You'll select from rock paper, or scissors below. 
                 You'll play against the computer. We'll keep a tally showing how well you're doing, and let you know the results after each game. 
-            <p>
-                <ul class="paragraph">
-                    <li>Paper beats rock</li>
-                    <li>Rock beats scissors</li>
-                    <li>Scissors beats paper</li>
-                </ul>
             </p>
-            </p>
+            <ul class="paragraph">
+                <li>Paper beats rock</li>
+                <li>Rock beats scissors</li>
+                <li>Scissors beats paper</li>
+            </ul>
+
         </section>
 
         <section>
-            <p 
-                class="sub-header-money" id='user-starting-amount'>I'll be nice and start you with $500. Make your bet below!
+            <p class="sub-header-money" id='user-starting-amount'>
+                I'll be nice and start you with $500. Make your bet below!
             </p>
             <p 
                 class="money-sign">$<input class="money-bet" id="money-bet" type="number">
@@ -51,25 +50,26 @@
         <section class="selector-section">
             <label>
                 <input class="picture-input" id="rock" type="radio" name="side" value="rock">
-                <img class="rock-image radio-image" src="assets/rock.png">
+                <img class="rock-image radio-image" src="assets/rock.png" alt="rock">
             </label>
             <label>
                 <input class="picture-input" id="paper" type="radio" name="side" value="paper">
-                <img class="paper-image radio-image" src="assets/paper.png">
+                <img class="paper-image radio-image" src="assets/paper.png" alt="paper">
             </label>
             <label>
                 <input class="picture-input" id="scissors" type="radio" name="side" value="scissors">
-                <img class="scissors-image radio-image" src="assets/scissors.png">
+                <img class="scissors-image radio-image" src="assets/scissors.png" alt="scissors">
             </label>
             <p>
                 <button class="button" id="button">Play!</button>
             </p>
         </section>
 
-        <section class="record-section">
+        <section class="invisible" id='record-section'>
             <p>
-                <img id="user-result-image" class="invisible" src="assets/scissors.png">
-                <img id="computer-result-image" class="invisible" src="assets/scissors.png">
+                <img id="user-result-image" class="invisible" src="assets/scissors.png" alt="user">
+                vs.
+                <img id="computer-result-image" class="invisible" src="assets/scissors.png" alt="computer">
             </p>
             <p id="record">
                 <span class="count-format">You've won: <span class="count" id="win-count"></span></span>
@@ -77,8 +77,8 @@
                 <span class="count-format">You've tied: <span class="count" id="tie-count"></span></span>
             </p>
             <p class="paragraph-money">
-                    Here's how much money you have left! $<span class="money-left" id="money-left"></span>
-                </p>
+                Here's how much money you have left! $<span class="money-left" id="money-left"></span>
+            </p>
             <p 
                 class="result-section">You chose <span class="user-choice" id="user-choice"></span> and the computer chose <span class="user-choice" id="computer-choice"></span>. Therefore, you <span class="user-choice" id = "rps-result"></span>
             </p>

@@ -39,7 +39,7 @@ label {
     cursor: pointer;
 }
 
-.record-section {
+#record-section {
     text-align: center;
     color: #3B8686;
     font-family: 'Raleway', sans-serif;

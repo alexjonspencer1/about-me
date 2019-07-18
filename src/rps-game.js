@@ -12,7 +12,8 @@ const messageCompChoice = document.getElementById('computer-choice');
 const userBetMessage = document.getElementById('money-bet');
 const userMoneyLeft = document.getElementById('money-left');
 const computerImage = document.getElementById('computer-result-image');
-const userImage = document.getElementById('user-result-image')
+const userImage = document.getElementById('user-result-image');
+const recordSection = document.getElementById('record-section');
 
 // Tracking states
 
@@ -24,6 +25,10 @@ let moneyLeft = 500;
 // Event handlers
 
 button.addEventListener('click', () => {
+
+    // Diplay everything I have hidden on main screen on button click
+
+    recordSection.classList.remove('invisible');
 
     // Determine User Bet
 
@@ -41,7 +46,7 @@ button.addEventListener('click', () => {
     const srcUser = 'assets/' + userThrow + '.png';
     userImage.src = srcUser;
     
-    // Determine Computer RPS Choice from RNG getThrow
+    // Determine Computer RPS Choice
     
     const computerChoice = getThrow();
     messageCompChoice.textContent = computerChoice;
