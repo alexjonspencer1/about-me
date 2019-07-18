@@ -8,6 +8,63 @@
     font-size: 50px;
 }
 
+label {
+    cursor: pointer;
+}
+
+.record-section {
+    text-align: center;
+    color: #3B8686;
+    font-family: 'Raleway', sans-serif;
+}
+
+#count {
+    display: flex;
+    justify-content: space-evenly;
+    width: 50%;
+    margin: auto;
+}
+
+main {
+    width: 85%;
+    margin: 0 auto;
+}
+
+input {
+    display: none;
+}
+
+input:checked + .radio-image {
+    border: 15px solid #0B486B
+}
+
+.main-section {
+    text-align: center;
+}
+
+.rock-image{
+    width: 20%;
+    height: 20%;
+}
+
+.paper-image {
+    width: 20%;
+    height: 20%;
+}
+
+.scissors-image {
+    width: 15%;
+    height: 15%;
+}
+
+.selector-section {
+    text-align: center;
+}
+
+nav a {
+    color: white;
+}
+
 .header {
     color: #3B8686;
     font-family: 'Raleway', sans-serif;
@@ -29,6 +86,3 @@
     font-size: 50px;
 }
 
-.main-section {
-    text-align: center;
-}

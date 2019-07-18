@@ -11,13 +11,55 @@
     <title>Rock, Paper, Scissors Game!</title>
 </head>
 <body>
-    <header>
-        <h1 class="page-title">Welcome to the Rock, Paper, Scissors Game!</h1>
-        <nav>
-            <a href="./">Home</a>
-            <a href="number-guess.html">Number Guessing Game</a>
-            <a href="rps-game.html">RPS Game</a>
-        </nav>
-    </header> 
+    <main>
+        <header>
+            <h1 class="page-title">The Rock, Paper, Scissors Game!</h1>
+            <nav>
+                <a href="./">Home</a>
+                <a href="number-guess.html">Number Guessing Game</a>
+                <a href="rps-game.html">RPS Game</a>
+            </nav>
+        </header>
+
+        <section>
+            <h1 class="header">
+                The Rules:
+            </h1>
+            <p class="paragraph">
+                So here are the rules, they're pretty simple. You'll select from rock, paper, or scissors below. You'll play against the computer. 
+                Paper beats rock, rock beats scissors, scissors beats papers. We'll track how well you're doing, and let you know the results after 
+                each game. 
+            </p>
+        </section>
+        
+        <section class="selector-section">
+            <label>
+                <input type="radio" name="side">
+                <img class="rock-image radio-image" src="assets/rock.png">
+            </label>
+            <label>
+                <input type="radio" name="side">
+                <img class="paper-image radio-image" src="assets/paper.jpg">
+            </label>
+            <label>
+                <input type="radio" name="side">
+                <img class="scissors-image radio-image" src="assets/scissors.jpg">
+            </label>
+            <p>
+                <button class="button" id="button">Play!</button>
+            </p>
+        </section>
+        <section class="record-section">
+            <p id="record">
+                <span>You've won: <span class="count" id="win-count">0</span></span>
+                <span>You've lost: <span class="count" id="loss-count">0</span></span>
+            </p>
+            <p 
+                class="result-rps-game" id = "rps-result">
+            </p>
+        </section>
+
+    </main>
+
 </body>
 </html>
