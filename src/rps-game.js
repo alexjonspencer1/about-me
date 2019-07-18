@@ -1,6 +1,6 @@
 import { getThrow } from './get-play.js';
 
-// Define referenced DOMs 
+// Define Referenced DOMs 
 
 const button = document.getElementById('button');
 const winCount = document.getElementById('win-count');
@@ -12,31 +12,33 @@ const messageCompChoice = document.getElementById('computer-choice');
 const userBetMessage = document.getElementById('money-bet');
 const userMoneyLeft = document.getElementById('money-left');
 
-// Event handlers
+// Tracking states
 
 let wins = 0;
 let losses = 0;
 let ties = 0;
 let moneyLeft = 500;
 
+// Event handlers
+
 button.addEventListener('click', () => {
 
-    //determine the users bet 
+    // Determine User Bet
 
     const userBet = userBetMessage.value;
     
-    //determine which item the user picked
+    // Determine User RPS Choice
 
     const userChoice = document.querySelector('input:checked');
     let userThrow = userChoice.value;
     messageUserChoice.textContent = userThrow;
 
-    //determine which number generated which item
+    // Determine Computer RPS Choice from RNG getThrow
 
     const computerChoice = getThrow();
     messageCompChoice.textContent = computerChoice;
 
-    // compare the item the user picked with the item generated
+    // Generate Results
     
     if(userThrow === computerChoice) {
         message.textContent = 'tie';
@@ -57,7 +59,7 @@ button.addEventListener('click', () => {
             message.textContent = 'win'; }
     }
 
-    // tally the wins and losses
+    // Tally Record and Bet Function (+/-)
 
     if(message.textContent === 'win') {
         winCount.textContent = wins += 1; 
