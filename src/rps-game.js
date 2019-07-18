@@ -9,22 +9,29 @@ const tieCount = document.getElementById('tie-count');
 const message = document.getElementById('rps-result');
 const messageUserChoice = document.getElementById('user-choice');
 const messageCompChoice = document.getElementById('computer-choice');
+const userBetMessage = document.getElementById('money-bet');
+const userMoneyLeft = document.getElementById('money-left');
 
 // Event handlers
 
 let wins = 0;
 let losses = 0;
 let ties = 0;
+let moneyLeft = 500;
 
 button.addEventListener('click', () => {
 
-    // // determine which item the user picked
+    //determine the users bet 
+
+    const userBet = userBetMessage.value;
+    
+    //determine which item the user picked
 
     const userChoice = document.querySelector('input:checked');
     let userThrow = userChoice.value;
     messageUserChoice.textContent = userThrow;
 
-    // // determine which number generated which item
+    //determine which number generated which item
 
     const computerChoice = getThrow();
     messageCompChoice.textContent = computerChoice;
@@ -52,14 +59,18 @@ button.addEventListener('click', () => {
 
     // tally the wins and losses
 
-    if(message.textContent === 'tie') { 
-        tieCount.textContent = ties += 1;
-    }
     if(message.textContent === 'win') {
         winCount.textContent = wins += 1; 
+        userMoneyLeft.textContent = moneyLeft -= -userBet;
     }
     if(message.textContent === 'lose') {
         lossCount.textContent = losses += 1;
+        userMoneyLeft.textContent = moneyLeft -= userBet;
+    }
+    
+    if(message.textContent === 'tie') { 
+        tieCount.textContent = ties += 1;
+        userMoneyLeft.textContent = moneyLeft;
     }
 
 });
