@@ -7,11 +7,12 @@ const tieCount = document.getElementById('tie-count');
 const messageResult = document.getElementById('rps-result');
 const messageUserChoice = document.getElementById('user-choice');
 const messageCompChoice = document.getElementById('computer-choice');
-const userBetMessage = document.getElementById('money-bet');
+const userBetChoice = document.getElementById('money-bet');
 const userMoneyLeft = document.getElementById('money-left');
 const computerImage = document.getElementById('computer-result-image');
 const userImage = document.getElementById('user-result-image');
 const gameSection = document.getElementById('record-section');
+const moneyRemaining = document.getElementById('money-remaining');
 const gameOverMessage = document.getElementById('game-over');
 
 let wins = 0;
@@ -21,14 +22,15 @@ let moneyLeft = 500;
 
 playButton.addEventListener('click', () => {
     displayEverything();
-    const userBet = determineUserBet();
+    let userBet = determineUserBet();
+    userBet = checkBet(userBet);
     let userPlay = determineUserPlay();
     displayUserPlay(userPlay);
     const computerPlay = determineComputerPlay();
     displayComputerPlay(computerPlay);
     generateResults(userPlay, computerPlay);
     recordCountsAndBets(userBet);
-    checkGameOverAndDisplay();    
+    checkGameOverAndDisplay();
 });
 
 function displayEverything() {
@@ -36,7 +38,15 @@ function displayEverything() {
 }
 
 function determineUserBet() {
-    return userBetMessage.value;
+    return userBetChoice.value;
+}
+
+function checkBet(userBet) {
+    while(userBet > moneyLeft) {
+        userBet = prompt('Invalid bet please place a lower bet:');
+    }
+    userBetChoice.value = userBet;
+    return userBet;
 }
 
 function determineUserPlay() {
@@ -113,5 +123,6 @@ function checkGameOverAndDisplay() {
     if(moneyLeft <= 0) {
         playButton.disabled = true;
         gameOverMessage.textContent = ('You have lost, please refresh to play again!');
+        moneyRemaining.classList.add('invisible');
     }
 }
