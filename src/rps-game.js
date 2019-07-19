@@ -1,103 +1,117 @@
 import { getThrow } from './get-play.js';
 
-// Define Referenced DOMs 
-
-const button = document.getElementById('button');
+const playButton = document.getElementById('button');
 const winCount = document.getElementById('win-count');
 const lossCount = document.getElementById('loss-count');
 const tieCount = document.getElementById('tie-count');
-const message = document.getElementById('rps-result');
+const messageResult = document.getElementById('rps-result');
 const messageUserChoice = document.getElementById('user-choice');
 const messageCompChoice = document.getElementById('computer-choice');
 const userBetMessage = document.getElementById('money-bet');
 const userMoneyLeft = document.getElementById('money-left');
 const computerImage = document.getElementById('computer-result-image');
 const userImage = document.getElementById('user-result-image');
-const recordSection = document.getElementById('record-section');
+const gameSection = document.getElementById('record-section');
 const gameOverMessage = document.getElementById('game-over');
-
-// Tracking states
 
 let wins = 0;
 let losses = 0;
 let ties = 0;
 let moneyLeft = 500;
 
-// Event handlers
+playButton.addEventListener('click', () => {
+    displayEverything();
+    const userBet = determineUserBet();
+    let userPlay = determineUserPlay();
+    displayUserPlay(userPlay);
+    const computerPlay = determineComputerPlay();
+    displayComputerPlay(computerPlay);
+    generateResults(userPlay, computerPlay);
+    recordCountsAndBets(userBet);
+    checkGameOverAndDisplay();    
+});
 
-button.addEventListener('click', () => {
+function displayEverything() {
+    gameSection.classList.remove('invisible');
+}
 
-    // Diplay everything I have hidden on main screen on button click
+function determineUserBet() {
+    return userBetMessage.value;
+}
 
-    recordSection.classList.remove('invisible');
-
-    // Determine User Bet
-
-    const userBet = userBetMessage.value;
-    
-    // Determine User RPS Choice
-
+function determineUserPlay() {
     const userChoice = document.querySelector('input:checked');
-    let userThrow = userChoice.value;
-    messageUserChoice.textContent = userThrow;
+    let userPlay = userChoice.value;
+    messageUserChoice.textContent = userPlay;
+    return userPlay;
+}
 
-    // Show User Result
-
+function displayUserPlay(userPlay) {
     userImage.classList.remove('invisible');
-    const srcUser = 'assets/' + userThrow + '.png';
+    const srcUser = 'assets/' + userPlay + '.png';
     userImage.src = srcUser;
-    
-    // Determine Computer RPS Choice
-    
-    const computerChoice = getThrow();
-    messageCompChoice.textContent = computerChoice;
+}
 
-    // Show Computer Result
+function determineComputerPlay() {
+    const computerPlay = getThrow();
+    messageCompChoice.textContent = computerPlay;
+    return computerPlay;
+}
 
+function displayComputerPlay(computerPlay) {
     computerImage.classList.remove('invisible');
-    const srcComputer = 'assets/' + computerChoice + '.png';
+    const srcComputer = 'assets/' + computerPlay + '.png';
     computerImage.src = srcComputer;
+}
 
-    // Generate Results
-    
-    if(userThrow === computerChoice) {
-        message.textContent = 'tie';
-    } else if(userThrow === 'rock') {
-        if(computerChoice === 'paper') {
-            message.textContent = 'lose';
-        } else {
-            message.textContent = 'win'; }
-    } else if(userThrow === 'paper') {
-        if(computerChoice === 'rock') {
-            message.textContent = 'win';
-        } else {
-            message.textContent = 'lose'; }
-    } else if(userThrow === 'scissors') {
-        if(computerChoice === 'rock') {
-            message.textContent = 'lose';
-        } else {
-            message.textContent = 'win'; }
+function generateResults(userPlay, computerPlay) {
+    if(userPlay === computerPlay) {
+        messageResult.textContent = 'tie';
     }
+    else if(userPlay === 'rock') {
+        if(computerPlay === 'paper') {
+            messageResult.textContent = 'lose';
+        }
+        else {
+            messageResult.textContent = 'win';
+        }
+    }
+    else if(userPlay === 'paper') {
+        if(computerPlay === 'scissors') {
+            messageResult.textContent = 'lose';
+        }
+        else {
+            messageResult.textContent = 'win';
+        }
+    }
+    else if(userPlay === 'scissors') {
+        if(computerPlay === 'rock') {
+            messageResult.textContent = 'lose';
+        }
+        else {
+            messageResult.textContent = 'win';
+        }
+    }
+}
 
-    // Tally Record and Bet Function (+/-)
-
-    if(message.textContent === 'win') {
-        winCount.textContent = wins += 1; 
+function recordCountsAndBets(userBet) {
+    if(messageResult.textContent === 'win') {
+        winCount.textContent = wins += 1;
         userMoneyLeft.textContent = moneyLeft -= -userBet;
     }
-    if(message.textContent === 'lose') {
+    if(messageResult.textContent === 'lose') {
         lossCount.textContent = losses += 1;
         userMoneyLeft.textContent = moneyLeft -= userBet;
     }
-    
-    if(message.textContent === 'tie') { 
+    if(messageResult.textContent === 'tie') {
         tieCount.textContent = ties += 1;
         userMoneyLeft.textContent = moneyLeft;
     }
+}
 
+function checkGameOverAndDisplay() {
     if(moneyLeft <= 0) {
-        button.disabled = true;
+        playButton.disabled = true;
         gameOverMessage.textContent = ('You have lost, please refresh to play again!');
-    }    
-
-});
+    }
+}
