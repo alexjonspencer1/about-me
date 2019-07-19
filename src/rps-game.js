@@ -41,7 +41,7 @@ button.addEventListener('click', () => {
     let userThrow = userChoice.value;
     messageUserChoice.textContent = userThrow;
 
-    // Show User Result
+    // Show User Result Image
 
     userImage.classList.remove('invisible');
     const srcUser = 'assets/' + userThrow + '.png';
@@ -52,7 +52,7 @@ button.addEventListener('click', () => {
     const computerChoice = getThrow();
     messageCompChoice.textContent = computerChoice;
 
-    // Show Computer Result
+    // Show Computer Result Image
 
     computerImage.classList.remove('invisible');
     const srcComputer = 'assets/' + computerChoice + '.png';
@@ -89,15 +89,13 @@ button.addEventListener('click', () => {
         lossCount.textContent = losses += 1;
         userMoneyLeft.textContent = moneyLeft -= userBet;
     }
-    
     if(message.textContent === 'tie') { 
         tieCount.textContent = ties += 1;
         userMoneyLeft.textContent = moneyLeft;
     }
-
     if(moneyLeft <= 0) {
         button.disabled = true;
         gameOverMessage.textContent = ('You have lost, please refresh to play again!');
     }    
-
+    
 });
