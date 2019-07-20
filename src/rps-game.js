@@ -21,7 +21,7 @@ let ties = 0;
 let moneyLeft = 500;
 
 playButton.addEventListener('click', () => {
-    displayEverything();
+    gameSection.classList.remove('invisible');
     let userBet = determineUserBet();
     userBet = checkBet(userBet);
     let userPlay = determineUserPlay();
@@ -32,10 +32,6 @@ playButton.addEventListener('click', () => {
     recordCountsAndBets(userBet);
     checkGameOverAndDisplay();
 });
-
-function displayEverything() {
-    gameSection.classList.remove('invisible');
-}
 
 function determineUserBet() {
     return userBetChoice.value;
