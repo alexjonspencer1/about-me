@@ -22,8 +22,9 @@
 }
 
 #computer-result-image, #user-result-image {
-    width: 10%;
-    height: 10%;
+    width: 121.03px;
+    height: 115.38px;
+    border-radius: 100%;
 }
 
 .money-bet{
@@ -80,7 +81,9 @@ main {
 }
 
 input:checked + .radio-image {
-    border: 5px solid #0B486B
+    box-shadow: 5px 15px 10px #888888;
+    /* opacity: 0.5; */
+    
 }
 
 .main-section {
@@ -88,20 +91,20 @@ input:checked + .radio-image {
 }
 
 .rock-image{
-    width: 10%;
-    height: 10%;
+    width: 121.03px;
+    height: 115.38px;
     border-radius: 100%;
 }
 
 .paper-image {
-    width: 10%;
-    height: 10%;
+    width: 121.03px;
+    height: 115.38px;
     border-radius: 100%;
 }
 
 .scissors-image {
-    width: 10.5%;
-    height: 10.5%;
+    width: 121.03px;
+    height: 115.38px;
     border-radius: 100%;
 }
 
@@ -145,5 +148,17 @@ nav a {
     font-size: 30px;
     text-decoration: underline;
     font-weight: bold;
+}
+
+.button {
+    background-color: #3B8686;
+    border: none;
+    color: white;
+    padding: 20px 20px;
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Raleway', sans-serif;
+    cursor: pointer;
+    margin-top: 30px
 }
 
