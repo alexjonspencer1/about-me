@@ -22,7 +22,7 @@ let moneyLeft = 500;
 
 playButton.addEventListener('click', () => {
     gameSection.classList.remove('invisible');
-    let userBet = determineUserBet();
+    let userBet = userBetChoice.value;
     userBet = checkBet(userBet);
     let userPlay = determineUserPlay();
     displayUserPlay(userPlay);
@@ -32,10 +32,6 @@ playButton.addEventListener('click', () => {
     recordCountsAndBets(userBet);
     checkGameOverAndDisplay();
 });
-
-function determineUserBet() {
-    return userBetChoice.value;
-}
 
 function checkBet(userBet) {
     while(userBet > moneyLeft) {
