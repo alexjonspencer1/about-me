@@ -1,19 +1,11 @@
-// Import My JS Files
-
 import comparedNumbers from './compare-numbers.js';
-
-// Defining DOM Elements
 
 const button = document.getElementById('button');
 const userGuess = document.getElementById('number-guess-input');
 const quizResult = document.getElementById('quiz-result');
 
-// Tracking States
-
 const correctNumber = Math.floor(Math.random() * 20); //Attribute MDN web docs
 let numberRemaining = 4;
-
-// Event Handler
 
 button.addEventListener('click', () => {
     
