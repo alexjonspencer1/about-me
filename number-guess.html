@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Number Guessing Game!</title>
+    <link rel="stylesheet" href="src/main.css">
+    <link rel="stylesheet" href="src/app.css">
+    <link rel="stylesheet" href="src/number-guess.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <h1 class="page-title">Welcome To The Number Guessing Game!</h1>
+        <nav>
+            <a href="./">Home |</a>
+            <a href="number-guess.html">Number Guessing Game |</a>
+            <a href="rps-game.html">RPS Game</a>
+        </nav>
+    </header>
+    
+    <main>
+
+        <section>
+            <h2 class = "header">
+                The Rules:
+            </h2>
+            <p class="paragraph">
+                Ok, so here are the rules. You'll get four (I said 4 only!) guesses to identify the correct number from 0 - 20. 
+                After each guess, a message will appear below telling you if it is too high, too low, or correct! 
+                It will also display how many tries you have left. Once you have zero (0) tries left, you've lost the game! 
+                But feel free to try again!! 
+            </p>
+        </section>
+        <section class="main-section">
+                <input class="number-guess-input" id="number-guess-input" type="number" min="0" max="20">
+            <p>
+                <button class="button" id="button">Guess Number!</button>
+            </p>
+            <p 
+                class="result-button-game" id = "quiz-result">
+            </p>
+            <button class="button-2" id="on-click-2" onClick="window.location.reload()">Click to Reset Quiz!</button>
+        </section>
+
+    </main>
+
+    <script type="module" src="src/number-guess.js"></script>
+    
+</body>
+</html>

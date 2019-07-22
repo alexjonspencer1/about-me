@@ -1,0 +1,164 @@
+.page-title {
+    color: #0B486B;
+    font-family: 'Raleway', sans-serif;
+    background-color: #CFF09E;
+    padding: 20px 20px 20px 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 50px;
+}
+
+.money-sign {
+    color: #0B486B;
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+}
+
+.invisible {
+    display: none; 
+}
+
+#computer-result-image, #user-result-image {
+    width: 121.03px;
+    height: 115.38px;
+    border-radius: 100%;
+}
+
+.money-bet{
+    font-size: 20px;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    width: 200px;
+    height: auto;
+    color: #0B486B;
+}
+
+label {
+    cursor: pointer;
+}
+
+#record-section {
+    text-align: center;
+    color: #3B8686;
+    font-family: 'Raleway', sans-serif;
+    font-size: 30px;
+}
+
+#count {
+    display: flex;
+    justify-content: space-evenly;
+    width: 50%;
+    margin: auto;
+}
+
+.count {
+    font-size: 30px;
+    color: #79BD9A;
+    font-weight: bold;
+}
+
+.user-choice {
+    font-size: 30px;
+    color: #79BD9A;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.count-format {
+    font-size: 20px;
+}
+
+main {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.picture-input {
+    display: none;
+}
+
+input:checked + .radio-image {
+    box-shadow: 5px 15px 10px #888888;
+    /* opacity: 0.5; */
+    
+}
+
+.main-section {
+    text-align: center;
+}
+
+.rock-image{
+    width: 121.03px;
+    height: 115.38px;
+    border-radius: 100%;
+}
+
+.paper-image {
+    width: 121.03px;
+    height: 115.38px;
+    border-radius: 100%;
+}
+
+.scissors-image {
+    width: 121.03px;
+    height: 115.38px;
+    border-radius: 100%;
+}
+
+.selector-section {
+    text-align: center;
+}
+
+nav a {
+    color: white;
+}
+
+.header {
+    color: #3B8686;
+    font-family: 'Raleway', sans-serif;
+}
+
+.sub-header-money {
+    color: #79BD9A;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    font-size: 20px;
+}
+
+.paragraph-money {
+    color: #0B486B;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    font-size: 25px;
+}
+
+.result {
+    color: #0B486B;
+    font-family: 'Raleway', sans-serif;
+    font-size: 50px;
+}
+
+.money-left {
+    color: #0B486B;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    font-size: 30px;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.button {
+    background-color: #3B8686;
+    border: none;
+    color: white;
+    padding: 20px 20px;
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Raleway', sans-serif;
+    cursor: pointer;
+    margin-top: 30px
+}
+
